@@ -1,15 +1,30 @@
 import java.util.*;
-public class LinearSearch {
-	
-	public static int linearSearch(int[] arr, int target) {
-        for (int i = 0; i < arr.length; i++) {
-            if (arr[i] == target) {
-                return i; // Return index if found
+
+public class BinarySearch{
+    public static int binarySearch(int[] nums, int target) {
+        // Write your code here.
+        int n = nums.length;
+
+        int left = 0;
+        int right = n-1;
+
+        while(left <= right){
+            int mid = left + (right - left)/2;
+            if(nums[mid] == target){
+                return mid;
+            }
+
+            else if(nums[mid] > target){
+                right = mid - 1;
+            }
+            else{
+                left = mid+1;
             }
         }
-        return -1; // Return -1 if not found
+        return -1;
     }
-	public static void main(String[] args) {
+
+    public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
         // Taking array size input
@@ -29,7 +44,7 @@ public class LinearSearch {
         int target = scanner.nextInt();
 
         // Calling the search function
-        int index = linearSearch(arr, target);
+        int index = binarySearch(arr, target);
 
         // Printing the result
         if (index != -1) {
@@ -40,5 +55,4 @@ public class LinearSearch {
 
         scanner.close();
     }
-
 }
