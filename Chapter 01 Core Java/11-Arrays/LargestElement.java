@@ -1,3 +1,6 @@
+//Integer.MIN_VALUE
+//Integer.MAX_VALUE
+
 import java.util.Scanner;
 
 public class LargestElement{
