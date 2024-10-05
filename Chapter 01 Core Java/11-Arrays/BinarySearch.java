@@ -1,20 +1,20 @@
 import java.util.*;
 
 public class BinarySearch{
-    public static int binarySearch(int[] nums, int target) {
+    public static int binarySearch(int[] arr, int target) {
         // Write your code here.
-        int n = nums.length;
+        int n = arr.length;
 
         int left = 0;
         int right = n-1;
 
         while(left <= right){
             int mid = left + (right - left)/2;
-            if(nums[mid] == target){
+            if(arr[mid] == target){
                 return mid;
             }
 
-            else if(nums[mid] > target){
+            else if(arr[mid] > target){
                 right = mid - 1;
             }
             else{
