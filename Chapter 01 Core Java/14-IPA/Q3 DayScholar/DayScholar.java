@@ -9,7 +9,7 @@ public class DayScholar {
             String b = sc.nextLine();
             String c = sc.nextLine();
             Double d = sc.nextDouble(); sc.nextLine();
-            Boolean e = sc.nextBoolean(); sc.nextLine();
+            Boolean e = sc.nextBoolean(); sc.nextLine();uu
 
             arr[i] = new Student(a, b, c, d, e);
 
